@@ -9,14 +9,14 @@ insert into orders(order_status,shipping_details)values('confirmed','shipped'),(
 ,('confirmed','shipped'),('cnfirmed','pending');
 select*from orders;
 select*from shopping1;
-select shopping1.product_name,orders.shipping_details from shopping1
+select  shopping1.product_id, shopping1.product_name,orders.shipping_details from shopping1
 left join orders on shopping1.product_id=orders.product_id;
 select shopping1.product_name,orders.shipping_details from shopping1
 right join orders on shopping1.product_id=orders.product_id;
-select shopping1.product_name,orders.shipping_details from shopping1
+select  shopping1.product_id, shopping1.product_name,orders.shipping_details from shopping1
 left join orders on shopping1.product_id=orders.product_id
 union
-select shopping1.product_name,orders.shipping_details from shopping1
+select  shopping1.product_id, shopping1.product_name,orders.shipping_details from shopping1
 right join orders on shopping1.product_id=orders.product_id;
 select shopping1.product_name,orders.shipping_details from shopping1
 cross join orders;
